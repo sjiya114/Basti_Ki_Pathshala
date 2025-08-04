@@ -1,0 +1,11 @@
+.para
+{
+    animation: anime 0.1s forwards;
+}
+@keyframes anime
+{
+    100%
+    {
+        opacity: 1;
+    }
+}
