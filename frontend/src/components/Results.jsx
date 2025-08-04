@@ -1,5 +1,17 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import {animated,useSpring} from '@react-spring/web'
+function Number({n})
+{
+const {number}=useSpring({
+  from:{number:0},
+  number:n,
+  delay:200,
+  // config:{mass:1,tension:20,friction:10}
+})
+return(<animated.span className="text-yellow-400">{number.to((n)=>n.toFixed(0))}</animated.span>
+);
+}
 
 function Results() {
   return (
@@ -13,16 +25,16 @@ function Results() {
   {/* Content above blur */}
   <ul className="relative z-20 font-bold text-white flex flex-row max-md:flex-col max-md:space-y-6 justify-evenly pt-40 text-4xl">
     <li className="flex flex-col items-center">
-      <span className="text-yellow-400">31245</span> <span>Life Changed</span>
+      <Number n={31245} /> <span>Life Changed</span>
     </li>
     <li className="flex flex-col items-center">
-      <span className="text-yellow-400">28976</span> <span>Meals Served</span>
+      <Number n={28976} /> <span>Meals Served</span>
     </li>
     <li className="flex flex-col items-center">
-      <span className="text-yellow-400">19854</span> <span>Interns</span>
+      <Number n={19854} /> <span>Interns</span>
     </li>
     <li className="flex flex-col items-center">
-      <span className="text-yellow-400">10,989</span> <span>Supporters</span>
+       <Number n={10989} /><span>Supporters</span>
     </li>
   </ul>
 </div>
