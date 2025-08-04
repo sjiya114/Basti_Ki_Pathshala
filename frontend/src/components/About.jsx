@@ -4,15 +4,15 @@ import { assets } from '../assets/assets'
 function About() {
   return (
     <div id='about' className='mt-20 px-10 py-10 rounded-lg max-w-screen-xl hover:scale-110  mx-auto  flex flex-row max-md:flex-col justify-center items-center'>
-      <div className='w-1/2 max-md:w-full flex flex-row space-x-4'  >
-      <div className='flex flex-col space-y-4'>
+      <div className='w-1/2 max-md:w-full flex flex-row items-center justify-center space-x-4'  >
+      <div className='flex max-xl:hidden flex-col space-y-4'>
        <img src={assets.image2} className='w-90 h-50 rounded-lg' alt="image1" />
-       <img src={assets.sample3} className='w-90 h-50 rounded-lg' alt="image3" />
+       <img src={assets.sample3} className='w-90 h-50 rounded-lg   ' alt="image3" />
       </div>
-       <img src={assets.sample1} alt="image2" className='w-100 h-100 rounded-lg' />
+       <img src={assets.sample1} alt="image2" className='w-100 h-100 max-md:w-fit h-fit rounded-lg' />
     </div>
       <div className='w-1/2 px-6  max-md:w-full  text-white '>
-        <h1  className='font-bold text-3xl  '  >About Us</h1>
+        <h1  className='font-bold text-3xl max-md:mt-6  '  >About Us</h1>
         <p className='pt-4 font-normal  tracking-wide'>Lighting the Path to Change with Basti Ki Pathshala Foundation</p>
         <p className='pt-2 font-normal tracking-wide'>At Basti Ki Pathshala Foundation, we are more than just an organization –
            we are a movement, driven by the belief that education is the cornerstone
